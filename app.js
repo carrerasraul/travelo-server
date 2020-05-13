@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -10,6 +11,8 @@ const usersRoutes = require('./routes/users-routes');
 const HttpError = require('./models/http-error');
 
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
