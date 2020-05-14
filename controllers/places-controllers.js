@@ -39,6 +39,7 @@ const getPlacesByUserId = async (req, res, next) => {
   // let places;
   let userWithPlaces;
   try {
+    // Makes you able to access documents stored in different collections in mongodb
     userWithPlaces = await User.findById(userId).populate('places');
   } catch (err) {
     const error = new HttpError(
@@ -72,6 +73,7 @@ const createPlace = async (req, res, next) => {
 
   const { title, description, address } = req.body;
 
+  // receives coordiantes with geocoding logic
   let coordinates;
   try {
     coordinates = await getCoordsForAddress(address);
@@ -106,6 +108,7 @@ const createPlace = async (req, res, next) => {
 
   console.log(user);
 
+  // Starts session then initiates transaction
   try {
     const sess = await mongoose.startSession();
     sess.startTransaction();
@@ -194,6 +197,7 @@ const deletePlace = async (req, res, next) => {
     return next(error);
   }
 
+  // Deletes image when place gets deleted
   const imagePath = place.image;
 
   try {

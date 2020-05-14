@@ -81,6 +81,7 @@ const signup = async (req, res, next) => {
   try {
     token = jwt.sign(
       { userId: createdUser.id, email: createdUser.email },
+      // Logs out after an hour
       process.env.JWT_KEY,
       { expiresIn: '1h' }
     );
@@ -112,6 +113,7 @@ const login = async (req, res, next) => {
     return next(error);
   }
 
+  // Checks whether user email and password is correct
   if (!existingUser) {
     const error = new HttpError(
       'Invalid credentials, could not log you in.',
@@ -143,7 +145,9 @@ const login = async (req, res, next) => {
   try {
     token = jwt.sign(
       { userId: existingUser.id, email: existingUser.email },
+      // Use same key used in 'signup'
       process.env.JWT_KEY,
+      // Logs out after an hour
       { expiresIn: '1h' }
     );
   } catch (err) {
