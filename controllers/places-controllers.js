@@ -71,7 +71,7 @@ const createPlace = async (req, res, next) => {
     );
   }
 
-  const { title, description, address } = req.body;
+  const { title, description, address, image } = req.body;
 
   // receives coordiantes with geocoding logic
   let coordinates;
