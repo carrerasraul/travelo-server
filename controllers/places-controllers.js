@@ -71,7 +71,7 @@ const createPlace = async (req, res, next) => {
     );
   }
 
-  const { title, description, address, image } = req.body;
+  const { title, description, address } = req.body;
 
   // receives coordiantes with geocoding logic
   let coordinates;
@@ -86,7 +86,7 @@ const createPlace = async (req, res, next) => {
     description,
     address,
     location: coordinates,
-    image: image,
+    image: req.file.path,
     creator: req.userData.userId,
   });
 
