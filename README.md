@@ -67,7 +67,7 @@ GET
 
 router.get('/user/:uid', placesControllers.getPlacesByUserId);
 ```
-POST (new place)
+POST
 ```
 @route   POST api/places/image
 @desc    Allows users to create new place
@@ -83,7 +83,7 @@ POST (new place)
       .isEmpty()
   ],
 ```
-PATCH (update place info)
+PATCH
 ```
 @route   PATCH api/places/:pid
 @desc    Allows users to update place
