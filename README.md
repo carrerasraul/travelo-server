@@ -3,9 +3,9 @@ Welcome to Travel-O! Share your favorite travel destinations, museums, restauran
 
 Contains functions to enable CRUD operations for client side application. Deployed with Heroku
 
-Visit the live site here: https://travel-o.web.app/
+VISIT THE LIVE SITE HERE: https://travel-o.web.app/
 
-Demo Credentials: EMAIL: test@test.com PASSWORD: travel
+DEMO CREDENTIALS: EMAIL: test@test.com PASSWORD: travel
 
 ---
 
