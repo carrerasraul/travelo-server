@@ -1,5 +1,7 @@
 # Travel-O - Back End
-Server side of Travel-O! Contains functions to enable CRUD operations for client side application. Deployed with Heroku
+Welcome to Travel-O! Share your favorite travel destinations, museums, restaurants... ANYTHING! Snap a photo, write a description and provide an address to share your favorite locations with your friends or any users around the world! 
+
+Contains functions to enable CRUD operations for client side application. Deployed with Heroku
 
 Visit the live site here: https://travel-o.web.app/
 
