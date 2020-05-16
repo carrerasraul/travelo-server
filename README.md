@@ -1,7 +1,9 @@
 # Travel-O - Back End
-Server side of React DevConnector Client. Contains functions to enable CRUD operations for client side application.
+Server side of Travel-O! Contains functions to enable CRUD operations for client side application. Deployed with Heroku
 
 Visit the live site here: https://travel-o.web.app/
+
+Demo Credentials: EMAIL: test@test.com PASSWORD: travel
 
 ---
 
@@ -12,10 +14,24 @@ Visit the live site here: https://travel-o.web.app/
 - Jwt Security
 - Mongoose
 - Multer
+- Chai
+- Mocha
+- Knex
 
 ---
 
+---
 ## Functionality
+```
+The app uses GET requests to pull the places from the database. 
+The app uses POST requests get sent to the database for:
+  - Adding users 
+  - Creating a new place 
+  - Logging a user in 
+  - Creating a new user
+The app uses DELETE requests when deleting a place. 
+The app uses PATCH requests when updating the title or description of a place
+```
 
 ### Users
 
